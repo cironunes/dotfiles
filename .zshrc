@@ -5,12 +5,22 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="blinks"
+ZSH_THEME="aussiegeek"
+
+# Functions
+server() {
+	python -m SimpleHTTPServer
+}
+
+nginx_restart() {
+	sudo nginx -s stop;
+        sudo nginx;
+}
 
 # Aliases
 alias cfg="vi ~/.zshrc"
-alias f5="source ~/.zshrc"
-alias hosts="vi /etc/hosts"
+alias f5="exec $SHELL"
+alias hosts="sudo vi /etc/hosts"
 alias basicvi="vi ~/hackin/vi-basico.txt"
 alias psd="open -a /Applications/Adobe\ Photoshop\ CS6/Adobe\ Photoshop\ CS6.app/"
 
