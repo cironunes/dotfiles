@@ -13,6 +13,8 @@ alias f5="source ~/.zshrc"
 alias hosts="vi /etc/hosts"
 alias basicvi="vi ~/hackin/vi-basico.txt"
 alias psd="open -a /Applications/Adobe\ Photoshop\ CS6/Adobe\ Photoshop\ CS6.app/"
+alias c="clear"
+alias clearcache="sudo rm /var/log/asl/*.asl"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -32,7 +34,7 @@ alias psd="open -a /Applications/Adobe\ Photoshop\ CS6/Adobe\ Photoshop\ CS6.app
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git svn)
+plugins=(git sublime svn)
 
 source $ZSH/oh-my-zsh.sh
 
