@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="blink"
+ZSH_THEME="awesomepanda"
 
 # Functions
 server() {
@@ -59,4 +59,3 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/cir
 export LANG=en_US.UTF-8
 
 eval "$(rbenv init -)"
-
