@@ -17,7 +17,7 @@ nginx_restart() {
         sudo nginx;
 }
 
-. /Users/ciro/z.sh
+. `brew --prefix`/etc/profile.d/z.sh
 
 # Aliases
 alias cfg="vi ~/.zshrc"
