@@ -7,6 +7,9 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="cirosheik"
 
+# z.sh
+. `brew --prefix`/etc/profile.d/z.sh
+
 # Functions
 server() {
     python -m SimpleHTTPServer
@@ -17,19 +20,17 @@ nginx_restart() {
         sudo nginx;
 }
 
-. `brew --prefix`/etc/profile.d/z.sh
+f5() {
+	exec $SHELL
+}
 
-# Aliases
-alias cfg="vi ~/.zshrc"
-alias f5="exec $SHELL"
-alias hosts="sudo st /etc/hosts"
-alias basicvi="vi ~/hackin/vi-basico.txt"
-alias psd="open -a /Applications/Adobe\ Photoshop\ CS6/Adobe\ Photoshop\ CS6.app/"
-alias c="clear"
-alias clearcache="sudo rm /var/log/asl/*.asl"
-alias svnadd="svn status | grep ^\? | awk '{ print $2 }' | xargs svn add"
-alias mou="open -a Mou"
-alias sinatra="ruby -rubygems"
+psd() {
+	open -a /Applications/Adobe\ Photoshop\ CS6/Adobe\ Photoshop\ CS6.app/
+}
+
+clearcache() {
+	sudo rm /var/log/asl/*.asl
+}
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -55,7 +56,5 @@ plugins=(git github svn ruby rails rails3 python terminator sublime node)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/ciro/Projects/scripts:$(brew --prefix php53)/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export LANG=en_US.UTF-8
-
-eval "$(rbenv init -)"
