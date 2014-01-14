@@ -28,6 +28,10 @@ psd() {
 	open -a /Applications/Adobe\ Photoshop\ CS6/Adobe\ Photoshop\ CS6.app/
 }
 
+mou() {
+	open -a /Applications/Mou.app $1
+}
+
 clearcache() {
 	sudo rm /var/log/asl/*.asl
 }
