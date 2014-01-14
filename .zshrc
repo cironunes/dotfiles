@@ -12,7 +12,7 @@ ZSH_THEME="cirosheik"
 
 # Functions
 server() {
-    python -m SimpleHTTPServer
+    python -m SimpleHTTPServer $1
 }
 
 nginx_restart() {
