@@ -32,6 +32,10 @@ mou() {
 	open -a /Applications/Mou.app $1
 }
 
+st() {
+  open -a /Applications/Sublime \ Text.app $1
+}
+
 clearcache() {
 	sudo rm /var/log/asl/*.asl
 }
